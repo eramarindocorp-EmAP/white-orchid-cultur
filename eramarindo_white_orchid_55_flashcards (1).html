@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102b3a">
+<title>Eramarindo | White Orchid Culture – 55 Flashcards</title>
+<style>
+:root{--navy:#102b3a;--navy2:#173f4b;--emerald:#167a61;--emerald2:#25a17e;--gold:#c8a65b;--ink:#18313a;--muted:#64777b;--paper:#f4f7f5;--white:#fff;--line:#dce6e1;--shadow:0 18px 50px rgba(16,43,58,.12)}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(145deg,#edf4f0,#f8f8f3 55%,#e8f1ed);font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--ink);min-height:100vh}
+header{background:linear-gradient(115deg,var(--navy),#164c4b);color:#fff;padding:28px 20px 32px;border-bottom:4px solid var(--gold)}
+.wrap{max-width:1040px;margin:auto}.eyebrow{font-size:11px;letter-spacing:.19em;text-transform:uppercase;color:#d7c18b;font-weight:800}
+h1{font-size:clamp(26px,4vw,42px);line-height:1.08;margin:10px 0 8px;letter-spacing:-.03em}.sub{color:#d7e7e1;max-width:720px;line-height:1.55;margin:0}
+.brandline{display:flex;align-items:center;gap:12px}.orchid{width:42px;height:42px;border:1px solid #c8a65b;border-radius:50%;display:grid;place-items:center;color:#e5ce91;font-size:23px}
+main{max-width:1040px;margin:24px auto;padding:0 18px 42px}
+.toolbar{display:grid;grid-template-columns:1fr auto auto;gap:10px;margin-bottom:16px}
+select,button{font:inherit}select{border:1px solid var(--line);background:#fff;border-radius:12px;padding:12px 14px;color:var(--ink);min-width:0}
+.btn{border:0;border-radius:12px;padding:12px 16px;font-weight:700;cursor:pointer;transition:.18s}
+.btn:hover{transform:translateY(-1px)}.btn:focus-visible,select:focus-visible{outline:3px solid #a8d7c7;outline-offset:2px}
+.primary{background:var(--emerald);color:white}.secondary{background:#fff;color:var(--navy);border:1px solid var(--line)}.gold{background:#f3ead5;color:#6c5420}
+.stats{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:10px 2px 8px;color:var(--muted);font-size:13px}
+.progress{height:8px;background:#dce8e1;border-radius:99px;overflow:hidden;margin-bottom:20px}.bar{height:100%;width:0;background:linear-gradient(90deg,var(--emerald),#8bbd8f);transition:width .25s}
+.card-area{perspective:1200px;max-width:790px;margin:0 auto}
+.card{height:350px;position:relative;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.2,.75,.2,1);cursor:pointer}
+.card.flipped{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:24px;padding:clamp(22px,4vw,42px);display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.65);overflow:auto}
+.front{background:linear-gradient(145deg,#fff,#f2f8f4);border-top:5px solid var(--emerald)}
+.back{background:linear-gradient(145deg,#123e3e,#102b3a);color:#fff;transform:rotateY(180deg);border-top:5px solid var(--gold)}
+.cardtop{display:flex;justify-content:space-between;align-items:center;gap:12px}.pill{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:800;padding:7px 10px;border-radius:99px;background:#e5f1eb;color:#17664f}
+.back .pill{background:rgba(255,255,255,.12);color:#e8d69e}
+.num{font-size:12px;color:var(--muted);font-weight:700}.back .num{color:#d6e2dd}
+.prompt{font-size:clamp(23px,3.3vw,34px);line-height:1.3;font-weight:750;letter-spacing:-.025em;max-width:680px}
+.answer{font-size:clamp(18px,2.4vw,24px);line-height:1.55;font-weight:550;max-width:680px}
+.hint{font-size:13px;color:var(--muted)}.back .hint{color:#c6d9d1}
+.cardcontrols{display:flex;justify-content:center;gap:10px;align-items:center;margin:20px auto 12px;flex-wrap:wrap}
+.cardcontrols .btn{min-width:112px}.flipnote{text-align:center;color:var(--muted);font-size:12px;margin:8px}
+.shortcuts{text-align:center;color:#82918e;font-size:11px;margin-top:10px}
+.footergrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.panel{background:rgba(255,255,255,.8);border:1px solid var(--line);border-radius:18px;padding:18px}
+.panel h3{font-size:14px;margin:0 0 10px;color:var(--navy)}
+.panel p{font-size:13px;line-height:1.55;color:var(--muted);margin:0}
+.pillars{display:flex;flex-wrap:wrap;gap:7px}.tag{font-size:11px;padding:6px 9px;background:#edf4ef;border-radius:99px;color:#315c4e}
+.complete{display:none;text-align:center;padding:30px 20px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}
+.complete h2{color:var(--emerald)}.complete p{color:var(--muted);line-height:1.6}
+@media(max-width:650px){header{padding:23px 17px}.toolbar{grid-template-columns:1fr 1fr}.toolbar select{grid-column:1/-1}.card{height:390px}.footergrid{grid-template-columns:1fr}.cardcontrols .btn{min-width:92px;padding:12px 13px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brandline"><div class="orchid">✿</div><div class="eyebrow">Eramarindo Corporation · Learning Series</div></div>
+  <h1>White Orchid Culture<br>55 Interactive Flashcards</h1>
+  <p class="sub">Latihan karakter, kepemimpinan, ketangguhan, dan integritas. Pelajari satu kartu demi satu kartu: baca pertanyaan, balik kartu, pahami penerapannya, lalu lanjutkan.</p>
+</div></header>
+<main>
+  <div class="toolbar">
+    <select id="filter" aria-label="Filter pilar">
+      <option value="all">Semua Pilar · 55 Kartu</option>
+      <option value="1">1 · Divine Destiny</option><option value="2">2 · Humility</option>
+      <option value="3">3 · Peace</option><option value="4">4 · Gratitude</option>
+      <option value="5">5 · Solitude</option><option value="6">6 · Resilience</option>
+      <option value="7">7 · Words</option><option value="8">8 · Vision</option><option value="9">9 · Faith</option>
+    </select>
+    <button class="btn secondary" id="shuffle">Acak Kartu</button>
+    <button class="btn gold" id="reset">Ulangi Progres</button>
+  </div>
+  <div class="stats"><span id="counter">Kartu 1 dari 55</span><span id="doneCount">0 dipelajari</span></div>
+  <div class="progress"><div class="bar" id="bar"></div></div>
+  <section class="card-area" id="cardArea">
+    <div class="card" id="card" tabindex="0" role="button" aria-label="Balik kartu untuk melihat jawaban">
+      <article class="face front">
+        <div class="cardtop"><span class="pill" id="pillarFront">Pilar 1</span><span class="num" id="numFront">01 / 55</span></div>
+        <div class="prompt" id="question">Apa makna utama memiliki tujuan hidup?</div>
+        <div class="hint">Pikirkan jawaban Anda sebelum membalik kartu ↗</div>
+      </article>
+      <article class="face back">
+        <div class="cardtop"><span class="pill" id="pillarBack">The Power of Divine Destiny</span><span class="num" id="numBack">01 / 55</span></div>
+        <div class="answer" id="answer">Menjalani tujuan hidup dengan iman, tanggung jawab, dan tindakan nyata.</div>
+        <div class="hint">Pahami · Praktikkan · Evaluasi · Perbaiki</div>
+      </article>
+    </div>
+  </section>
+  <p class="flipnote">Klik kartu atau tekan Enter / Spasi untuk membaliknya.</p>
+  <div class="cardcontrols">
+    <button class="btn secondary" id="prev">← Sebelumnya</button>
+    <button class="btn primary" id="flip">Balik Kartu</button>
+    <button class="btn secondary" id="mark">Tandai Dipelajari ✓</button>
+    <button class="btn secondary" id="next">Berikutnya →</button>
+  </div>
+  <div class="shortcuts">Pintasan keyboard: ← sebelumnya · → berikutnya · Spasi balik kartu · M tandai dipelajari</div>
+  <section class="complete" id="complete">
+    <h2>Selamat! Semua kartu dalam pilihan ini telah dipelajari.</h2>
+    <p>Teruskan penerapan nilai White Orchid Culture dalam keputusan dan perilaku sehari-hari.</p>
+    <button class="btn primary" id="again">Pelajari Lagi</button>
+  </section>
+  <div class="footergrid">
+    <div class="panel"><h3>Standar Pembelajaran</h3><p><strong>Learn – Understand – Practice – Evaluate – Improve.</strong><br>Flashcards ini merupakan materi pembelajaran internal. Penguasaan kartu bukan pengganti observasi perilaku nyata.</p></div>
+    <div class="panel"><h3>Sembilan Pilar</h3><div class="pillars"><span class="tag">Divine Destiny</span><span class="tag">Humility</span><span class="tag">Peace</span><span class="tag">Gratitude</span><span class="tag">Solitude</span><span class="tag">Resilience</span><span class="tag">Words</span><span class="tag">Vision</span><span class="tag">Faith</span></div></div>
+  </div>
+</main>
+<script>
+const pillars=[
+"The Power of Divine Destiny","The Power of Humility","The Power of Peace",
+"The Power of Gratitude","The Power of Solitude","The Power of Resilience",
+"The Power of Words","The Power of Vision","The Power of Faith"
+];
+const data=[
+[1,"Apa makna utama The Power of Divine Destiny?","Meyakini bahwa hidup memiliki tujuan, lalu menjalankan tanggung jawab dengan iman, kesungguhan, dan tindakan nyata."],
+[1,"Bagaimana tujuan hidup seharusnya memengaruhi pekerjaan?","Tujuan memberi arah dan makna; pekerjaan diterjemahkan menjadi kontribusi yang bermanfaat dan dapat dipertanggungjawabkan."],
+[1,"Apakah keyakinan pada takdir berarti kita cukup menunggu?","Tidak. Keyakinan harus berjalan bersama usaha, kebijaksanaan, perencanaan, dan tanggung jawab."],
+[1,"Bagaimana menghadapi kesempatan yang tidak sesuai rencana?","Menilai kesempatan dengan tenang, mempertimbangkan nilai dan risikonya, lalu mengambil keputusan yang bertanggung jawab."],
+[1,"Apa hubungan tujuan hidup dengan integritas?","Tujuan yang baik harus ditempuh melalui cara yang benar, bukan dengan mengorbankan kejujuran atau martabat orang lain."],
+[1,"Bagaimana seorang Golden RE People menunjukkan tujuan hidup?","Dengan bekerja bermakna, menjaga amanah, mengembangkan kemampuan, dan memberi kontribusi positif."],
+[2,"Apa makna The Power of Humility?","Rendah hati, terbuka untuk belajar, menghargai orang lain, dan tidak merasa paling benar."],
+[2,"Bagaimana menerima kritik secara dewasa?","Dengarkan, minta penjelasan bila perlu, periksa faktanya, ambil pelajaran, dan lakukan perbaikan."],
+[2,"Apakah rendah hati berarti tidak boleh tegas?","Tidak. Rendah hati dapat berjalan bersama ketegasan, selama keputusan dibuat dengan adil dan hormat."],
+[2,"Bagaimana memperlakukan rekan yang berbeda pengalaman?","Hargai kontribusinya, dengarkan perspektifnya, dan nilai gagasan berdasarkan substansi serta bukti."],
+[2,"Apa yang dilakukan ketika kita melakukan kesalahan?","Akui secara jujur, pahami dampaknya, minta maaf bila diperlukan, dan lakukan tindakan korektif."],
+[2,"Bagaimana pemimpin menunjukkan kerendahan hati?","Memberi teladan, mau mendengar, mengakui kontribusi tim, dan bersedia memperbaiki keputusan."],
+[3,"Apa makna The Power of Peace?","Kemampuan menjaga ketenangan batin dan menyelesaikan persoalan secara dewasa, adil, serta konstruktif."],
+[3,"Bagaimana merespons konflik di tempat kerja?","Pisahkan fakta dari asumsi, dengarkan pihak terkait, klarifikasi masalah, dan sepakati langkah penyelesaian."],
+[3,"Apakah menjaga kedamaian berarti menghindari masalah?","Tidak. Kedamaian berarti menghadapi masalah tanpa memperkeruh keadaan atau menyerang pribadi."],
+[3,"Apa yang sebaiknya dilakukan saat emosi meningkat?","Berhenti sejenak, atur respons, hindari kata-kata impulsif, dan lanjutkan pembicaraan saat lebih tenang."],
+[3,"Bagaimana menyampaikan ketidaksetujuan dengan damai?","Sampaikan alasan dan bukti dengan sopan, fokus pada masalah, serta tetap menghormati orang yang berbeda pendapat."],
+[3,"Apa tanda lingkungan kerja yang damai?","Komunikasi terbuka, rasa aman untuk menyampaikan masalah, penyelesaian konflik yang adil, dan saling menghormati."],
+[4,"Apa makna The Power of Gratitude?","Menghargai kehidupan, kesempatan, orang lain, dan hasil kerja tanpa berhenti berusaha menjadi lebih baik."],
+[4,"Bagaimana menunjukkan rasa syukur kepada tim?","Mengakui kontribusi, memberi apresiasi yang tulus, berbagi penghargaan, dan mendukung perkembangan rekan."],
+[4,"Apakah bersyukur berarti menerima semua keadaan tanpa perubahan?","Tidak. Syukur berjalan bersama ikhtiar, evaluasi, dan usaha memperbaiki keadaan."],
+[4,"Bagaimana menyikapi keberhasilan pribadi?","Bersyukur, tetap rendah hati, mengakui dukungan pihak lain, dan menggunakan keberhasilan secara bertanggung jawab."],
+[4,"Apa manfaat menghargai kontribusi kecil?","Membangun rasa dihargai, memperkuat kerja sama, dan mendorong kebiasaan saling mendukung."],
+[4,"Bagaimana menerapkan rasa syukur saat menghadapi keterbatasan?","Mengakui kondisi secara realistis, menghargai sumber daya yang ada, dan mencari solusi dengan bijaksana."],
+[5,"Apa makna The Power of Solitude?","Menyediakan waktu untuk refleksi, doa atau perenungan pribadi, dan evaluasi diri agar pikiran lebih jernih."],
+[5,"Apa perbedaan refleksi dengan menyalahkan diri?","Refleksi mencari pelajaran dan langkah perbaikan; menyalahkan diri terus-menerus tidak menghasilkan solusi."],
+[5,"Mengapa pemimpin memerlukan waktu berpikir sendiri?","Agar dapat menimbang fakta, risiko, nilai, dan konsekuensi sebelum mengambil keputusan penting."],
+[5,"Bagaimana melakukan refleksi harian?","Tinjau hal yang berjalan baik, kesalahan, komitmen yang belum selesai, dan satu perbaikan untuk esok hari."],
+[5,"Apakah solitude berarti menjauh dari kerja sama?","Tidak. Waktu pribadi untuk refleksi justru membantu seseorang kembali berkolaborasi dengan lebih baik."],
+[5,"Apa pertanyaan refleksi yang berguna sebelum pulang kerja?","Apakah tindakan saya hari ini sesuai nilai, apakah tanggung jawab saya terpenuhi, dan apa yang perlu diperbaiki?"],
+[6,"Apa makna The Power of Resilience?","Ketangguhan untuk menghadapi kesulitan, belajar dari kegagalan, beradaptasi, dan bangkit dengan tindakan yang tepat."],
+[6,"Apa respons yang tepat ketika target tidak tercapai?","Laporkan fakta, cari akar masalah, tentukan tindakan korektif, dan pantau pemulihannya."],
+[6,"Apakah tangguh berarti tidak boleh meminta bantuan?","Tidak. Mengenali batas kemampuan dan meminta bantuan yang tepat merupakan bagian dari ketangguhan."],
+[6,"Bagaimana menghadapi kegagalan berulang?","Evaluasi asumsi dan metode, cari penyebab mendasar, ubah pendekatan, dan ukur hasil perbaikan."],
+[6,"Apa perbedaan ketangguhan dan keras kepala?","Ketangguhan tetap berpegang pada tujuan yang benar sambil mau mengubah cara; keras kepala menolak masukan dan bukti."],
+[6,"Bagaimana pemimpin menjaga semangat tim saat krisis?","Memberi informasi faktual, menetapkan prioritas, membagi tanggung jawab, mendukung tim, dan memantau langkah pemulihan."],
+[7,"Apa makna The Power of Words?","Menggunakan perkataan yang jujur, santun, jelas, tepat, dan dapat dipertanggungjawabkan."],
+[7,"Mengapa janji harus dijaga?","Janji membangun ekspektasi dan kepercayaan; karena itu komitmen harus realistis dan ditindaklanjuti."],
+[7,"Bagaimana menyampaikan kabar buruk kepada pimpinan?","Sampaikan segera dengan fakta, dampak, risiko, dan pilihan tindakan; jangan menyembunyikan keadaan."],
+[7,"Apa yang harus dilakukan sebelum meneruskan informasi yang belum pasti?","Verifikasi sumber dan konteksnya. Jika belum terkonfirmasi, nyatakan ketidakpastian dan jangan menyebarkannya sebagai fakta."],
+[7,"Bagaimana memberikan umpan balik yang membangun?","Bahas perilaku atau hasil yang spesifik, jelaskan dampaknya, dan tawarkan langkah perbaikan."],
+[7,"Apa hubungan komunikasi dengan kepercayaan?","Komunikasi yang konsisten, jujur, dan terbuka membantu orang memahami keadaan serta mengandalkan komitmen satu sama lain."],
+[8,"Apa makna The Power of Vision?","Kemampuan melihat arah masa depan dan menerjemahkannya menjadi prioritas, sasaran, serta tindakan nyata."],
+[8,"Bagaimana mengubah visi menjadi pekerjaan harian?","Turunkan visi menjadi target terukur, penanggung jawab, jadwal, sumber daya, dan indikator keberhasilan."],
+[8,"Mengapa prioritas penting dalam strategi?","Waktu, dana, dan kapasitas terbatas; prioritas membantu sumber daya diarahkan pada hal paling penting dan layak."],
+[8,"Bagaimana menilai peluang bisnis secara bertanggung jawab?","Periksa kelayakan, asumsi, pendanaan, risiko, kepatuhan, kapasitas pelaksanaan, dan manfaat yang diharapkan."],
+[8,"Apa yang dilakukan ketika rencana tidak lagi sesuai kondisi?","Periksa perubahan fakta, evaluasi dampak, revisi rencana melalui kewenangan yang benar, dan komunikasikan perubahannya."],
+[8,"Bagaimana memastikan visi tidak berhenti sebagai slogan?","Hubungkan visi dengan keputusan, anggaran, target, perilaku pimpinan, dan evaluasi hasil secara berkala."],
+[9,"Apa makna The Power of Faith?","Memelihara iman, pengharapan, dan ketekunan sebagai sumber kekuatan moral dan spiritual dalam menjalani tanggung jawab."],
+[9,"Bagaimana iman berjalan bersama tanggung jawab profesional?","Keyakinan memberi kekuatan batin, sementara pekerjaan tetap membutuhkan kompetensi, bukti, perencanaan, dan tindakan nyata."],
+[9,"Apakah doa menggantikan perencanaan dan kerja keras?","Tidak. Doa dan pengharapan dapat berjalan bersama ikhtiar, pembelajaran, serta keputusan yang bijaksana."],
+[9,"Bagaimana menjaga harapan saat menghadapi masa sulit?","Fokus pada hal yang dapat dilakukan, mencari dukungan yang tepat, menjaga nilai, dan melangkah secara bertahap."],
+[9,"Bagaimana menghormati perbedaan keyakinan di tempat kerja?","Hormati martabat dan kebebasan setiap orang, jangan memaksakan keyakinan, dan bekerja sama secara profesional."],
+[9,"Apa hubungan iman dengan integritas?","Iman dapat menguatkan komitmen moral untuk berkata benar, menepati amanah, dan bertanggung jawab atas tindakan."],
+[9,"Apa komitmen utama Golden RE People?","Menjadi insan yang berkarakter, berintegritas, kompeten, tangguh, menghargai sesama, dan terus bertumbuh."]
+];
+let order=data.map((_,i)=>i), idx=0, learned=new Set(), flipped=false;
+const $=id=>document.getElementById(id);
+const card=$("card");
+function current(){return data[order[idx]]}
+function render(){
+ const d=current();flipped=false;card.classList.remove("flipped");
+ $("question").textContent=d[1];$("answer").textContent=d[2];
+ $("pillarFront").textContent=`Pilar ${d[0]}`;$("pillarBack").textContent=pillars[d[0]-1];
+ $("numFront").textContent=$("numBack").textContent=`${String(idx+1).padStart(2,"0")} / ${order.length}`;
+ $("counter").textContent=`Kartu ${idx+1} dari ${order.length}`;
+ $("doneCount").textContent=`${order.filter(i=>learned.has(i)).length} dipelajari`;
+ $("bar").style.width=`${order.length?order.filter(i=>learned.has(i)).length/order.length*100:0}%`;
+ $("mark").textContent=learned.has(order[idx])?"Sudah Dipelajari ✓":"Tandai Dipelajari ✓";
+ $("prev").disabled=idx===0;$("next").disabled=idx===order.length-1;
+ $("complete").style.display=order.length>0&&order.every(i=>learned.has(i))?"block":"none";
+}
+function flip(){flipped=!flipped;card.classList.toggle("flipped",flipped)}
+function move(n){idx=Math.max(0,Math.min(order.length-1,idx+n));render()}
+$("filter").addEventListener("change",e=>{
+ const v=e.target.value;order=data.map((d,i)=>i).filter(i=>v==="all"||String(data[i][0])===v);idx=0;render();
+});
+$("shuffle").onclick=()=>{for(let i=order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[order[i],order[j]]=[order[j],order[i]]}idx=0;render()};
+$("reset").onclick=()=>{if(confirm("Hapus tanda dipelajari dan mulai ulang progres?")){learned.clear();idx=0;render()}};
+$("prev").onclick=()=>move(-1);$("next").onclick=()=>move(1);$("flip").onclick=flip;
+card.onclick=flip;card.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();flip()}};
+$("mark").onclick=()=>{learned.add(order[idx]);render();if(idx<order.length-1)move(1)};
+$("again").onclick=()=>{idx=0;render();$("complete").scrollIntoView({behavior:"smooth",block:"center"})};
+document.addEventListener("keydown",e=>{
+ if(["INPUT","TEXTAREA","SELECT"].includes(document.activeElement.tagName))return;
+ if(e.key==="ArrowRight")move(1);if(e.key==="ArrowLeft")move(-1);
+ if(e.code==="Space"&&document.activeElement!==card){e.preventDefault();flip()}
+ if(e.key.toLowerCase()==="m")$("mark").click();
+});
+render();
+</script>
+</body></html>
